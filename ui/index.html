@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Expiry Tracker</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Food Expiry Tracker</h1>
+    <button id="connectBtn">Connect Wallet</button>
+  </header>
+
+  <div id="statusBar" class="small">
+    Network: <span id="net">—</span> • Account: <span id="acc">—</span>
+  </div>
+
+  <!-- SEARCH & FILTER BAR -->
+  <section style="margin:30px 0; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+    <select id="filterSelect">
+      <option value="all">All Products</option>
+      <option value="valid">Valid Only</option>
+      <option value="expired">Expired Only</option>
+    </select>
+    <input type="text" id="searchInput" placeholder="Search name or category..." />
+    <button onclick="applyFilters()" style="padding:10px 20px; background:#2563eb; color:white; border:none; border-radius:6px;">
+      Apply Filter
+    </button>
+  </section>
+
+  <div id="productsArea">
+    <div class="empty">Connect wallet to load products.</div>
+  </div>
+</div>
+
+<div class="fab" id="fab">+</div>
+
+<!-- ADD PRODUCT MODAL -->
+<template id="addModalTpl">
+  <div class="modal-backdrop" id="modalWrap">
+    <div class="modal">
+      <h3>Add New Product</h3>
+      <input id="m_name" type="text" placeholder="Product Name" required />
+      <input id="m_category" type="text" placeholder="Category (e.g. Dairy, Snacks)" required />
+      <label class="small">Manufacture Date</label>
+      <input id="m_mfg" type="date" required />
+      <label class="small">Expiry Date</label>
+      <input id="m_exp" type="date" required />
+      <div style="text-align:right; margin-top:16px;">
+        <button id="m_cancel">Cancel</button>
+        <button id="m_add">Add Product</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>

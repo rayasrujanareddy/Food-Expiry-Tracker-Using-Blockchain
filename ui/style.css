@@ -1,0 +1,53 @@
+
+    body { font-family: system-ui, sans-serif; background: #f7f9fc; margin:0; color:#1f2937; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+    h1 { margin:0; font-size:24px; }
+    button { cursor:pointer; }
+    #connectBtn { padding:10px 20px; background:#3b82f6; color:white; border:none; border-radius:8px; font-weight:bold; }
+    #connectBtn.connected { background:#16a34a; }
+    .small { font-size:13px; color:#666; }
+    .card { background:white; border-radius:12px; padding:16px; margin:12px 0; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+    .card.valid { border-left:5px solid #10b981; }
+    .card.expired { border-left:5px solid #ef4444; background:#fef2f2; }
+    .card h3 { margin:0 0 8px 0; }
+    .timer { margin:12px 0; font-weight:bold; }
+    .countdown-valid { color:#059669; }
+    .countdown-expired { color:#dc2626; }
+    .fab { position:fixed; bottom:30px; right:30px; width:60px; height:60px; background:#3b82f6; color:white; border-radius:50%; font-size:36px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+    .empty { text-align:center; padding:40px; color:#888; font-size:18px; }
+    .modal-backdrop { position:fixed; inset:0; background:rgba(0,0,0,0.5); display:flex; align-items:center; justify-content:center; z-index:1000; }
+    .modal { background:white; padding:24px; border-radius:12px; width:90%; max-width:400px; }
+    input, select { width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:6px; font-size:16px; }
+    .modal button { padding:10px 16px; margin:8px 4px 0 0; border:none; border-radius:6px; }
+    #m_add { background:#10b981; color:white; }
+    #m_cancel { background:#e5e7eb; }
+    #filterSelect {
+    padding: 8px 10px !important;
+    font-size: 14px !important;
+    height: 44px;
+    width: 180px !important;
+    border-radius: 8px !important;
+    border: 1px solid #ccc !important;
+    background-color: rgb(143, 239, 133);
+  }
+
+  /* NEW: Makes the search box smaller and matches the height */
+  #searchInput {
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    height: 34px;
+    border-radius: 8px !important;
+    border: 1px solid #ccc !important;
+    flex: 1;
+    min-width: 180px;
+  }
+
+  /* NEW: Makes the blue button smaller and perfectly aligned */
+  #filterSelect + input + button {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    height: 44px;
+    border-radius: 7px !important;
+  }
+ 
